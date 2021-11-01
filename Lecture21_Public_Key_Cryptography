@@ -7,7 +7,6 @@
 PadMessage:= function(message, N);
 PM := [];
 E := "";
-NumDig := Floor(Log(N)/Log(10))+1;
 for i:= 1 to #message do
 case message[i]:
 when "a": E cat:="10"; when "b": E cat:="11"; when "c": E cat:="12"; when "d": E cat:="13"; 
