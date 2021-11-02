@@ -58,17 +58,6 @@ end for;
 return Alphabetize(P);
 end function;
 
-CaesarDecrypt := function(ciphertext, a, b);
-C := Digitize(ciphertext);
-P := [];
-ainv := InverseMod(a,26);
-binv := ainv*b;
-for i := 1 to #C do
-    P cat:= [(ainv*C[i]-binv) mod 26];
-end for;
-return Alphabetize(P);
-end function;
-
 //Examples 
 
 Digitize("Cryptography");
